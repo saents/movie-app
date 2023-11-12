@@ -1,0 +1,16 @@
+.Menu_Item.ant-menu-item-selected,
+.Menu_Item:hover,
+.Menu_Item:active {
+  background-color: var(--tv-sidebar-active);
+}
+
+.ant-menu-item.Menu_Item {
+  img {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+.Menu_Item a {
+  color: wheat;
+}

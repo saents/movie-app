@@ -1,0 +1,15 @@
+.carousel_item {
+  position: relative;
+  margin: 0px 10px;
+  width: 190px;
+  transition: all 200ms ease-in-out;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+  img {
+    width: 180px;
+    aspect-ratio: 3/4;
+  }
+}

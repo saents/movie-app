@@ -1,0 +1,88 @@
+.home_container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color: var(--tv-sidebar-background);
+
+  .background_video_container {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    .background_video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .background_image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .home_main_content_container {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
+
+    .home_content_container {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      height: 100%;
+
+      .home_content_TenderedInfo {
+        width: 50%;
+        .home_content_actions {
+          display: flex;
+
+          .playButton, .moreInfoButton {
+            width: 160px;
+            padding: 25px 0px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 30px;
+            margin-right: 20px;
+            outline: none;
+            border: none;
+
+            span {
+              margin-left: 10px;
+              margin: 25px 0px;
+              font-size: 1.5em;
+            }
+          }
+
+          .moreInfoButton {
+            background: linear-gradient(125deg, rgb(87, 87, 235) 0%, rgb(0, 14, 128) 100%);
+          }
+
+          .moreInfoButton:hover {
+            color: black
+          }
+        }
+
+      }
+      .home_content_container_slider {
+        max-width: 80%;
+        height: 100%;
+        display: flex;
+        justify-content: flex-start;
+      }
+
+    }
+  }
+}
+
