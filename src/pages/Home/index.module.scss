@@ -42,13 +42,45 @@
       justify-content: space-around;
       height: 100%;
 
+      .home_content_container_slider_container {
+        width: 100%;
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+      }
+
       .home_content_TenderedInfo {
         width: 50%;
+        background: transparent;
+        border: none;
+        margin-left: 100px;
+
+        .home_content_TenderedInfo_Category {
+          font-size: 1.7em;
+          color: grey;
+          letter-spacing: 5px;
+        }
+
+        .home_content_TenderedInfo_ReleaseYear {
+          font-size: 1.4em;
+          color: var(--tv-white_900);
+        }
+
+        .home_content_TenderedInfo_Description {
+          font-size: 1.4em;
+          color: var(--tv-white_900);
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+
         .home_content_actions {
           display: flex;
 
           .playButton, .moreInfoButton {
             width: 160px;
+            font-weight: 700;
             padding: 25px 0px;
             display: flex;
             justify-content: center;
@@ -66,6 +98,7 @@
           }
 
           .moreInfoButton {
+            color: var(--tv-white_900);
             background: linear-gradient(125deg, rgb(87, 87, 235) 0%, rgb(0, 14, 128) 100%);
           }
 

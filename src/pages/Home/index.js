@@ -44,14 +44,8 @@ const Home = () => {
             <div className={s.home_main_content_container}>
                 <div className={s.home_content_container}>
                     <TenderedFilm />
-                    <div style={{
-                        width: "100%",
-                        marginBottom: 20,
-                        display: "flex",
-                        justifyContent: "flex-start",
-                        alignItems: 'center'
-                    }}>
-                        <div className={s.home_content_container_slider} style={{}}>
+                    <div className={s.home_content_container_slider_container}>
+                        <div className={s.home_content_container_slider}>
                             <CustomCarousel />
                         </div>
                     </div>

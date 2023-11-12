@@ -34,20 +34,23 @@ const TenderedFilm = () => {
     }
 
     return (
-        <Card style={{background: "transparent", border: "none", marginLeft: 100}} className={s.home_content_TenderedInfo}>
-            <Paragraph style={{fontSize: "1.7em", color: 'grey', letterSpacing: 5}} strong>{Category.toUpperCase()}</Paragraph>
+        <Card className={s.home_content_TenderedInfo}>
+            <Paragraph className={s.home_content_TenderedInfo_Category} strong>{Category.toUpperCase()}</Paragraph>
             <div>
                 <img width={500} src={TenderedFilmLogo} alt="Film Logo" />
             </div>
             <div>
-                <Paragraph style={{fontSize: "1.4em", color: 'var(--tv-white_900)'}}>{`${ReleaseYear} ${MpaRating} ${hours}h ${minutes}m`}</Paragraph>
-                <Paragraph style={{fontSize: "1.4em", color: 'var(--tv-white_900)', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis'}}>{Description}</Paragraph>
+                <Paragraph className={s.home_content_TenderedInfo_ReleaseYear}>{`${ReleaseYear} ${MpaRating} ${hours}h ${minutes}m`}</Paragraph>
+                <Paragraph className={s.home_content_TenderedInfo_Description}>{Description}</Paragraph>
             </div>
             <div className={s.home_content_actions}>
-                <Button style={{fontWeight: 700}} onClick={handlePlayButton} icon={ isPlaying ? <PauseOutlined /> : <CaretRightOutlined />} className={s.playButton}>
+                <Button onClick={handlePlayButton}
+                        icon={ isPlaying ? <PauseOutlined /> : <CaretRightOutlined />}
+                        className={s.playButton}
+                >
                     {isPlaying ? 'Stop' : 'Play'}
                 </Button>
-                <Button style={{fontWeight: 700, color: 'var(--tv-white_900)'}} className={s.moreInfoButton}>
+                <Button className={s.moreInfoButton}>
                     More Info
                 </Button>
             </div>

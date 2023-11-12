@@ -1,3 +1,39 @@
+.sidebar_userInformation {
+  margin-bottom: 100px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  margin-top: 20px;
+
+  .sidebar_userInformation_avatarIcon {
+    background-color: var(--tv-white_900);
+    color: #000;
+  }
+
+  .sidebar_userInformation_userName {
+    margin-top: 10px;
+    color: var(--tv-white_900);
+    font-size: 1.9em;
+  }
+}
+
+.sidebar_navigation_link {
+  color: var(--tv-white_900);
+  font-size: 1.6em;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.sidebar_settings_option {
+  font-size: 1.3em;
+  font-weight: 700;
+  color: grey;
+}
+
+
+
+
 .Menu_Item.ant-menu-item-selected,
 .Menu_Item:hover,
 .Menu_Item:active {

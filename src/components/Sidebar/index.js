@@ -19,7 +19,7 @@ const CustomSidebar = () => {
     return (
         <Sider
             width={350}
-            style={{zIndex: 999, backgroundColor: 'var(--tv-sidebar-background)'}}
+            style={{zIndex: 900, backgroundColor: 'var(--tv-sidebar-background)'}}
             collapsible={true}
             collapsed={!isSidebarOpen}
             onMouseEnter={() => dispatch(setIsSidebarOpen(true))}
@@ -28,20 +28,14 @@ const CustomSidebar = () => {
         >
             <div>
                 {isSidebarOpen &&
-                    <div style={{
-                        marginBottom: 100,
-                        display: 'flex',
-                        justifyContent: "space-around",
-                        alignItems: 'center',
-                        textAlign: 'center',
-                        marginTop: '20px'
-                    }}>
-                        <Avatar size={60} style={{backgroundColor: '#fff', color: '#000'}} icon={<UserOutlined color={'#fff'}/>}/>
-                        <p style={{
-                            marginTop: '10px',
-                            color: 'white',
-                            fontSize: 30
-                        }}>Daniel</p>
+                    <div className={s.sidebar_userInformation}>
+                        <Avatar size={60}
+                                className={s.sidebar_userInformation_avatarIcon}
+                                icon={<UserOutlined color={'#fff'}/>}
+                        />
+                        <p className={s.sidebar_userInformation_userName}>
+                            Daniel
+                        </p>
                     </div>
                 }
                 <Menu
@@ -56,17 +50,10 @@ const CustomSidebar = () => {
                     {routesData.map((item) =>
                         <Menu.Item
                             onClick={() => setIsSidebarOpen(false)}
-                            style={{
-                                backgroundColor: window.location.pathname === item.url ? 'var(--tv-sidebar-active)' : 'var(--tv-sidebar-background)',
-                            }}
+                            style={{backgroundColor: window.location.pathname === item.url ? 'var(--tv-sidebar-active)' : 'var(--tv-sidebar-background)',}}
                             className={s.Menu_Item} key={item.text}
                             icon={<img style={{marginLeft: 7, marginTop: 6}} src={item.icon}/>}>
-                            <Link style={{
-                                color: 'var(--tv-white_900)',
-                                fontSize: '1.6em',
-                                textAlign: 'center',
-                                marginBottom: 20
-                            }} to={item.url}>{item.text}</Link>
+                            <Link className={s.sidebar_navigation_link} to={item.url}>{item.text}</Link>
                         </Menu.Item>
                     )}
                 </Menu>
@@ -76,7 +63,7 @@ const CustomSidebar = () => {
                         }}>
                             {SIDEBAR_DATA.map((item) =>
                                 <Menu.Item danger={item === 'Exit' && true} key={item}>
-                                    <Paragraph strong style={{fontSize: '1.3em', fontWeight: 700, color: 'grey'}}>
+                                    <Paragraph className={s.sidebar_settings_option} strong>
                                         {item}
                                     </Paragraph>
                                 </Menu.Item>

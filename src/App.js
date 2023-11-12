@@ -12,6 +12,7 @@ import { sortByTargetIds } from "./utils/helpers.js";
 import {MOVIES_DATA} from "./constants/movies.js";
 
 import './App.scss';
+import Loader from "./components/Loader/index.js";
 
 function App() {
     const dispatch = useDispatch();
@@ -31,7 +32,7 @@ function App() {
     }, [dispatch])
 
     return (
-        <Suspense fallback={'loading'}>
+        <Suspense fallback={<Loader />}>
             <div className={'App'}>
                 <Layout style={{width: '100%', height: '100%'}}>
                     <CustomSidebar/>
