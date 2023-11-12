@@ -13,10 +13,10 @@ const CustomCarousel = () => {
     const settings = {
         infinite: true,
         autoplay: true,
-        speed: 500,
-        autoplaySpeed: 3000,
+        speed: 800,
+        autoplaySpeed: 2500,
         slidesToShow: 8,
-        slidesToScroll: 2,
+        slidesToScroll: 3,
         variableWidth: true,
     }
     return (
