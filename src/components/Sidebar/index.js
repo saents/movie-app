@@ -62,11 +62,11 @@ const CustomSidebar = () => {
                             backgroundColor: 'var(--tv-sidebar-background)',
                         }}>
                             {SIDEBAR_DATA.map((item) =>
-                                <Menu.Item danger={item === 'Exit' && true} key={item}>
+                                <Link key={item} to={'/'}>
                                     <Paragraph className={s.sidebar_settings_option} strong>
                                         {item}
                                     </Paragraph>
-                                </Menu.Item>
+                                </Link>
                             )}
                         </Menu>
                     }
