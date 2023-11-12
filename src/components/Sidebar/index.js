@@ -49,7 +49,7 @@ const CustomSidebar = () => {
                     mode="vertical"
                     style={{
                         backgroundColor: 'var(--tv-sidebar-background)',
-                        marginBottom: 100,
+                        marginBottom: 50,
                         marginTop: !isSidebarOpen && 160
                     }}
                 >
@@ -76,7 +76,7 @@ const CustomSidebar = () => {
                         }}>
                             {SIDEBAR_DATA.map((item) =>
                                 <Menu.Item danger={item === 'Exit' && true} key={item}>
-                                    <Paragraph strong style={{fontSize: '2em', fontWeight: 700, color: 'grey'}}>
+                                    <Paragraph strong style={{fontSize: '1.3em', fontWeight: 700, color: 'grey'}}>
                                         {item}
                                     </Paragraph>
                                 </Menu.Item>

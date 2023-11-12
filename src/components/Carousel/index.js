@@ -22,7 +22,7 @@ const CustomCarousel = () => {
     return (
         <Slider {...settings}>
             {movies.map(film => (
-                <CarouselItem film={film}/>
+                <CarouselItem key={film.Id} film={film}/>
             ))}
         </Slider>
     );
