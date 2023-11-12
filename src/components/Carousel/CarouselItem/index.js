@@ -30,7 +30,7 @@ const CorouselItem = ({film}) => {
 
     return (
         <div key={film.Id} onClick={handlePlayButton} className={s.carousel_item}>
-            <img src={images[film.CoverImage]} alt="image"/>
+            <img style={{objectFit: 'cover'}} src={images[film.CoverImage]} alt="image"/>
         </div>
     );
 };
