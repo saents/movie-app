@@ -23,9 +23,6 @@ const settings = {
 const Home = () => {
     const {movies, selectedMovie, isPlaying} = useSelector(state => state.movies);
    
-
-
-
     return (
         <div className={s.home_container}>
             <div className={s.background_video_container}>
