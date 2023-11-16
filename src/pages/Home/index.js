@@ -23,7 +23,7 @@ const settings = {
 const Home = () => {
     const {movies, selectedMovie, isPlaying} = useSelector(state => state.movies);
    
-    const videoUrl = '';
+
 
 
     return (
