@@ -1,6 +1,6 @@
 # TV Application with React.js
 
-Welcome to the TV Application, a visually stunning and responsive web experience powered by the React.js library.
+Welcome to the TV Application, a visually stunning and web experience powered by the React.js library.
 
 ## Overview
 
